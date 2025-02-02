@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900');
+
+/* Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes blur-in {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Homepage background */
+.background {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('/img/background.jpg') center/cover no-repeat;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+
+    a {
+        color: white;
+        transition: all 0.3s ease-in-out;
+        font-size: 20px;
+    }
+    a:hover, a:focus {
+        color: white;
+    }
+    .navbar-brand {
+        font-size: 24px;
+        font-weight: bold;
+        padding-left: 40px;
+    }
+}
+
+/* My Div */
+.my-div .left-div {
+    align-content: center;
+}
+
+.my-div .left-div .title {
+    font-size: 72px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 70px;
+    text-transform: uppercase;
+    animation: fade-in-down 1s;
+
+    .second-half {
+        color: #ff3f27;
+    }
+}
+
+.my-div .left-div .text {
+    margin-top: 25px;
+    max-width: 85%;
+    color: white;
+    font-size: 20px;
+    animation: blur-in 1s ease-in-out forwards;
+}
+
+.my-div .left-div .button {
+    color: black;
+    padding: 5px 0 5px 15px;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 35px;
+    width: 170px;
+    transition: all 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    animation: blur-in 1s ease-in forwards;
+    cursor: pointer;
+    i {
+        margin-left: 30px;
+        font-size: 20px;
+        transition: all 0.5s ease-in-out;
+    }
+}
+.my-div .left-div .button::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    background-color: #ff3f27;
+}
+
+.my-div .left-div .button:hover {
+    width: 180px;
+    i {
+        transform: translateX(20px);
+        color: #ff3f27;
+    }
+}
+
+.my-div .right-div .image {
+    height: 700px;
+    background: url("/img/fitness-man.png") center/contain no-repeat;
+    animation: fade-in-up 1s ease-in-out forwards;
+    filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.7));
+}
+
+/* Card */
+.card {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    min-height: 250px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-40px); /* Initial position */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.card .card-logo {
+    font-size: 36px;
+}
+.card .card-title {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+}
+.card .card-content {
+    animation: blur-in 1s ease-in-out forwards;
+    padding: 5px;
+}
+
+/* Drag and Drop Section */
+.upload-section{
+    background: url("/img/background.jpg") center/cover no-repeat;
+    padding-top: 40px;
+    height: 100vh;
+}
+.upload-section h1{
+    color: white;
+    text-align: center;
+}
+.upload-section .upload-image-div {
+    .drag-drop-div {
+        background-color: #ffffff;
+        height: 500px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px auto auto;
+    }
+}
+
+#drop-area {
+    width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 200px;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+}
+
+#preview-container {
+    text-align: center;
+}

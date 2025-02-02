@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<div class="background">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">CLICK FIT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content: flex-end">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Content -->
+    <div class="my-div">
+        <div class="row w-75 m-auto pt-5">
+            <div class="left-div col-lg-6">
+                <div class="title">
+                    <span class="first-half">Unleash</span>
+                    <br>
+                    <span class="second-half">Potential</span>
+                </div>
+                <div id="text" class="text">
+                    Welcome to Click Fit, where fitness meets passion and every workout brings
+                    you closer to your best self.<br>
+                    Whether you're lifting, running, or stretching, every move counts. Build strength, boost endurance,
+                    and sculpt the body you've always wanted.<br>
+                    Push past limits, break barriers, and embrace the grind!
+                </div>
+                <div class="button">
+                    JOIN NOW
+                    <i class="fa fa-caret-right"></i>
+                </div>
+            </div>
+            <div class="right-div col-lg-6">
+                <div class="image"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses -->
+    <section>
+        <div style="background-color: white; padding-top: 100px">
+            <h1 class="text-center">Popular Fitness Courses</h1>
+            <div class="row pt-5 w-75 m-auto">
+                <div class="col-lg-4 p-5">
+                    <div class="card">
+                        <div class="card-logo">
+                            <i class="fa-regular fa-hospital" style="color: #ff3f27"></i>
+                        </div>
+                        <div class="card-title">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-5">
+                    <div class="card">
+                        <div class="card-logo">
+                            <i class="fa-regular fa-eye" style="color: #9029ff"></i>
+                        </div>
+                        <div class="card-title">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-5">
+                    <div class="card">
+                        <div class="card-logo">
+                            <i class="fa-regular fa-hospital" style="color: #ff3f27"></i>
+                        </div>
+                        <div class="card-title">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-5">
+                    <div class="card">
+                        <div class="card-logo">
+                            <i class="fa-regular fa-eye" style="color: #9029ff"></i>
+                        </div>
+                        <div class="card-title">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-5">
+                    <div class="card">
+                        <div class="card-logo">
+                            <i class="fa-regular fa-hospital" style="color: #ff3f27"></i>
+                        </div>
+                        <div class="card-title">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-5">
+                    <div class="card">
+                        <div class="card-logo">
+                            <i class="fa-regular fa-eye" style="color: #9029ff"></i>
+                        </div>
+                        <div class="card-title">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Upload Image -->
+    <section class="upload-section">
+        <h1>Upload your image</h1>
+        <div class="upload-image-div">
+            <div class="drag-drop-div">
+                <div id="drop-area">
+                    Drag here to preview
+                </div>
+                <input type="file" accept="image/*" id="file-input" multiple hidden>
+                <div id="preview-container"></div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/js/drag-drop.js"></script>
+<script src="/js/handle-animation.js"></script>
+<script src="/js/after-loading.js"></script>
+</html>
